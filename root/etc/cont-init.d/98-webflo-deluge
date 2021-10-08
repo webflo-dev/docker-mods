@@ -1,0 +1,17 @@
+#!/usr/bin/with-contenv bash
+
+log () { echo "[$1] [webflo/docker-mods] "$2""; }
+log_info () { log "INFO" "$1"; }
+log_error () { log "ERROR" "$1"; }
+
+echo '---------------------------------'
+echo '|  webflo docker mod (deluge)  |'
+echo '---------------------------------'
+
+mkdir -p /backup /blackhole /config/logs
+
+if [[ ! -f /config/core.confg ]]; then
+  cp /defaults/{autoadd,core,web}.conf /config
+fi
+
+chown -R abc:abc /config /backup /blackhole

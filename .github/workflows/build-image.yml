@@ -1,12 +1,12 @@
-name: appname
+name: deluge
 
 on:
   push:
     branches:
-      - appname
+      - deluge
 
 jobs:
-  appname:
+  deluge:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,7 +23,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GH_CONTAINER_REGISTRY }}
+          password: ${{ secrets.GITHUB_TOKEN  }}
 
       - name: Prepare image info
         id: info
@@ -38,10 +38,10 @@ jobs:
           push: true
           context: .
           tags: |
-            ghcr.io/webflo-dev/docker-mods:appname
-            ghcr.io/webflo-dev/docker-mods:appname-${{steps.info.outputs.sha}}
+            ghcr.io/webflo-dev/docker-mods:deluge
+            ghcr.io/webflo-dev/docker-mods:deluge-${{steps.info.outputs.sha}}
           labels: |
-            org.opencontainers.image.title=webfflo docker-mod for appname
+            org.opencontainers.image.title=webfflo docker-mod for deluge
             org.opencontainers.image.created=${{steps.info.outputs.date}}
             org.opencontainers.image.version=${{github.sha}}
 
