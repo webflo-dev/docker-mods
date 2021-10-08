@@ -1,0 +1,37 @@
+#!/usr/bin/with-contenv bash
+
+echo '--------------------------------'
+echo '|  webflo docker mod (nzbget)  |'
+echo '--------------------------------'
+
+# make our folders
+mkdir -p /downloads /nzb /data /scripts /config/logs
+
+cp /defaults/nzbget.conf /app/nzbget/share/nzbget/nzbget.conf
+
+function init_config(){
+  echo "INFO: initialize default configuration."
+  cp /app/nzbget/share/nzbget/nzbget.conf /config/nzbget.conf
+}
+
+
+if [[ ! -e /config/nzbget.conf ]]; then
+  init_config
+else
+  linuxserver_config=$(grep -c "^DestDir=/downloads/completed" /config/nzbget.conf)
+  if [ "$linuxserver_config" != "1" ]; then
+    init_config
+  else
+      echo "INFO: configuration seems to be already setup. Skip default configuration."
+  fi
+fi
+
+cp -R /defaults/scripts/* /scripts 2> /dev/null
+
+# permissions
+chown -R abc:abc /data /scripts /nzb
+chmod u+rw /config/nzbget.conf
+
+
+
+
