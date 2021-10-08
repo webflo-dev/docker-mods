@@ -1,12 +1,12 @@
-name: nzbget
+name: jackett
 
 on:
   push:
     branches:
-      - nzbget
+      - jackett
 
 jobs:
-  nzbget:
+  jackett:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,10 +38,10 @@ jobs:
           push: true
           context: .
           tags: |
-            ghcr.io/webflo-dev/docker-mods:nzbget
-            ghcr.io/webflo-dev/docker-mods:nzbget-${{steps.info.outputs.sha}}
+            ghcr.io/webflo-dev/docker-mods:jackett
+            ghcr.io/webflo-dev/docker-mods:jackett-${{steps.info.outputs.sha}}
           labels: |
-            org.opencontainers.image.title=webfflo docker-mod for nzbget
+            org.opencontainers.image.title=webfflo docker-mod for jackett
             org.opencontainers.image.created=${{steps.info.outputs.date}}
             org.opencontainers.image.version=${{github.sha}}
 

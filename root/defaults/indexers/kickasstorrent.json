@@ -1,0 +1,20 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://katcr.co/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": "KATSSESS_ID70AT8=n1dqq0di9gefn6bmbuerpli2bf7lhkm8; katsecalert=83507ebb7e2407aa54af987afe45c5c2"
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": "Exception (kickasstorrent): The operation was canceled.: The operation was canceled."
+  }
+]

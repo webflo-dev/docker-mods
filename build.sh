@@ -1,1 +1,0 @@
-docker build --no-cache -t ghcr.io/webflo-dev/docker-mods:nzbget .

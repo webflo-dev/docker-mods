@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://thepiratebay.org/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": "__cfduid=d2891a44fa958f02f2251371807cc4eb61591106704; __cf_bm=986e251e8d1707c9d65ffaa258277d9cb42a0b2e-1593680289-1800-Ae3ldpf0fKGRegoE7ESikl6nQ3EoiFreo6qCCh1JlbFShYLZ7sVnIDaJSYqgsUB08MqAP50b0I1Ty8HR2wObjA0="
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": "Exception (thepiratebay): Request to https://apibay.org/precompiled/data_top100_recent.json failed (Error GatewayTimeout) - The tracker seems to be down.: Request to https://apibay.org/precompiled/data_top100_recent.json failed (Error GatewayTimeout) - The tracker seems to be down."
+  },
+  {
+    "id": "tags",
+    "type": "inputtags",
+    "name": "Tags",
+    "value": ""
+  }
+]

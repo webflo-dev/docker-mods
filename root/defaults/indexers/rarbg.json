@@ -1,0 +1,51 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://rarbg.to/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": "__cfduid=dbd358b9d0ebe72cb4e12140900a0bb761591106704; __cf_bm=04ab83e7e678514ef505ff8db12d744f56336722-1620649918-1800-AbbAystXh0zhL/IR/OpR0Zdm1fmZRoPPXH9WpI0T2ZizUD/AjGAobrFRU/q1sZQJuyGeoUMrpLwAnFh46MS5jns="
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": null
+  },
+  {
+    "id": "sortrequestedfromsite",
+    "type": "inputselect",
+    "name": "Sort requested from site",
+    "value": "last",
+    "options": {
+      "last": "created",
+      "seeders": "seeders",
+      "leechers": "leechers"
+    }
+  },
+  {
+    "id": "numberofretries",
+    "type": "inputselect",
+    "name": "Number of retries",
+    "value": "2",
+    "options": {
+      "0": "No retries (fail fast)",
+      "1": "1 retry (0.5s delay)",
+      "2": "2 retries (1s delay)",
+      "3": "3 retries (2s delay)",
+      "4": "4 retries (4s delay)",
+      "5": "5 retries (8s delay)"
+    }
+  },
+  {
+    "id": "tags",
+    "type": "inputtags",
+    "name": "Tags",
+    "value": ""
+  }
+]
