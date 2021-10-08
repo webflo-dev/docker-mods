@@ -1,5 +1,0 @@
-#!/usr/bin/with-contenv bash
-
-echo '---------------------------------'
-echo '|  webflo docker mod (appname)  |'
-echo '---------------------------------'
