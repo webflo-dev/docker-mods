@@ -38,8 +38,8 @@ jobs:
           push: true
           context: .
           tags: |
-            ghcr.io/webflo-dev/docker-mods:deluge
-            ghcr.io/webflo-dev/docker-mods:deluge-${{steps.info.outputs.sha}}
+            ghcr.io/webflo-nas/docker-mods:deluge
+            ghcr.io/webflo-nas/docker-mods:deluge-${{steps.info.outputs.sha}}
           labels: |
             org.opencontainers.image.title=webfflo docker-mod for deluge
             org.opencontainers.image.created=${{steps.info.outputs.date}}
