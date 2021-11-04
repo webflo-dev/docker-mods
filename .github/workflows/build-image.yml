@@ -38,8 +38,8 @@ jobs:
           push: true
           context: .
           tags: |
-            ghcr.io/webflo-dev/docker-mods:appname
-            ghcr.io/webflo-dev/docker-mods:appname-${{steps.info.outputs.sha}}
+            ghcr.io/webflo-nas/docker-mods:appname
+            ghcr.io/webflo-nas/docker-mods:appname-${{steps.info.outputs.sha}}
           labels: |
             org.opencontainers.image.title=webflo docker-mod for appname
             org.opencontainers.image.created=${{steps.info.outputs.date}}
